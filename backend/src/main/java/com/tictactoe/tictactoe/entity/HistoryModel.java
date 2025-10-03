@@ -3,71 +3,6 @@ package com.tictactoe.tictactoe.entity;
 import jakarta.persistence.*;
 import java.util.UUID;
 
-//@Entity
-//@Table(name = "history")
-//public class HistoryModel {
-//
-//    @Id
-//    @Column(name = "id", columnDefinition = "CHAR(36)")
-//    private String id;
-//
-//    @Column(nullable = false, columnDefinition = "CHAR(36)")
-//    private String token;
-//
-//    @Column(nullable = false)
-//    private Integer size;
-//
-//    @Column(name = "board_state", columnDefinition = "TEXT")
-//    private String boardState;
-//
-//    public HistoryModel() {
-//    }
-//
-//    public HistoryModel(String token, Integer size, String boardState) {
-//        this.token = token;
-//        this.size = size;
-//        this.boardState = boardState;
-//    }
-//
-//    @PrePersist
-//    public void generateId() {
-//        if (this.id == null) {
-//            this.id = UUID.randomUUID().toString();
-//        }
-//    }
-//
-//    public String getId() {
-//        return id;
-//    }
-//
-//    public void setId(String id) {
-//        this.id = id;
-//    }
-//
-//    public String getToken() {
-//        return token;
-//    }
-//
-//    public void setToken(String token) {
-//        this.token = token;
-//    }
-//
-//    public Integer getSize() {
-//        return size;
-//    }
-//
-//    public void setSize(Integer size) {
-//        this.size = size;
-//    }
-//
-//    public String getBoardState() {
-//        return boardState;
-//    }
-//
-//    public void setBoardState(String boardState) {
-//        this.boardState = boardState;
-//    }
-//}
 @Entity
 @Table(name = "history")
 public class HistoryModel {
@@ -104,8 +39,6 @@ public class HistoryModel {
         }
         this.createdAt = new java.util.Date();
     }
-
-    // getters and setters for all fields including createdAt
 
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }

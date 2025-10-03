@@ -153,27 +153,4 @@ const Board = ({boardState, boardSize, onClick}: BoardProps) => {
     return <Column gap={0}>{rows}</Column>;
 }
 
-// type LogProps = {
-//     history: BoardState[],
-//     jumpTo: (step: number) => void,
-// }
-// const Log =(props: LogProps)=>{
-//     return (
-//         <ol>
-//             {/* <button>Go to move #1</button> */}
-//             {
-//                 props.history.map((e, index) => {
-//                     return(
-//                      <li key={index}>
-//                         <button className = "list"onClick={() => props.jumpTo(index)}>
-//                         {index === 0 ? 'start #0' : `move #${index}`}
-//                         </button>
-
-//                      </li>   
-//                     )
-//                 })
-//             }
-//         </ol>
-//     );
-// }
 export default Game;
