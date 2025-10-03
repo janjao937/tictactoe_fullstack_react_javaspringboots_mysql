@@ -26,27 +26,6 @@ const generateWinningCombinations = (size: number) => {
     
 }
 
-// const calculateWinner  = (boardState: BoardState, size: number = 3) =>{
-    
-//     // const winningCombinations = [
-//     //     [0, 1, 2],
-//     //     [3, 4, 5],
-//     //     [6, 7, 8],
-//     //     [0, 3, 6],
-//     //     [1, 4, 7],
-//     //     [2, 5, 8],
-//     //     [0, 4, 8],
-//     //     [2, 4, 6],
-//     // ];
-//     const winningCombinations = generateWinningCombinations(size);
-//     for (let i = 0; i< winningCombinations.length; i++){
-//         const [a, b, c] = winningCombinations[i];
-//         if (boardState[a] && boardState[a] === boardState[b] && boardState[a] === boardState[c]){
-//             return boardState[a];
-//         }
-//     }
-//     return null;
-// }
 const calculateWinner  = (boardState: BoardState, size: number = 3) => {
     if (!Array.isArray(boardState) || boardState.length < size * size) return null;
     const winningCombinations = generateWinningCombinations(size);
@@ -112,11 +91,11 @@ export const useGameState = (size: number = 3) => {
         }
     }, [winner, token]);
     useEffect(() => {
-    setGameState({
-        history: [createBoardState(activeSize * activeSize)],
-        step: 0,
-    });
-}, [activeSize]);
+        setGameState({
+            history: [createBoardState(activeSize * activeSize)],
+            step: 0,
+        });
+    }, [activeSize]);
 
     const handleClick = (squareIndex: number) => {
         const history = gameState.history.slice(0, gameState.step + 1);
