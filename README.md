@@ -43,7 +43,7 @@ server.port=8080
 ```
 ---
 
-### frontend (Spring Boot)
+### frontend (React)
 ```bash
 cd frontend
 npm install
